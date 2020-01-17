@@ -41,7 +41,7 @@ function cuerpo_modal_edicion($llave, $llave_tipo_dato, $modi, $modi_tipo_dato){
 
 
 # 
-# mostra un "texarea" en lugar de un simple cuadro de texto, bajo la siguiente configuracion por defecto:
+# Mostrará un "texarea" en lugar de un simple cuadro de texto, bajo la siguiente configuración por defecto:
 # <textarea id="id_campo" rows="4" cols="50" class="form-control input-sm" required=""></textarea>
 </pre>
 <hr/>
