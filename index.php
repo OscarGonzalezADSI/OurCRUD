@@ -82,7 +82,7 @@ patent rights.
                         <p class="text-small text-gray mb-0 lh-condensed-ultra">
                             OscarGonzalez1987/OurCRUD is licensed under the
                         </p>
-                        <h3 class="mt-0 mb-2 h4">GNU Lesser General Public License v3.0</h3><br/>
+                        <h3 class="mt-0 mb-2 h4">GNU General Public License v3.0</h3><br/>
 
 
                     </div>                
