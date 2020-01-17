@@ -42,6 +42,8 @@ function tipo_campo($fila) {
         $tipo_dato = "time";
     } elseif ($fila['DATA_TYPE'] == "varchar") {
         $tipo_dato = "text";
+    } elseif ($fila['DATA_TYPE'] == "text") {
+        $tipo_dato = "text";
     } elseif ($fila['DATA_TYPE'] == "int") {
         $tipo_dato = "number";
     } elseif ($fila['DATA_TYPE'] == "double") {
@@ -143,9 +145,15 @@ function cuerpo_modal_insertar($campo, $tipo_dato) {
     $cuerpo_modal_insertar = "<div class=\"modal-body\">\n\t\t\t";
     $x = 1;
     while ($x <= count($campo)) {
-        $cuerpo_modal_insertar = $cuerpo_modal_insertar . "<label>" . $campo[$x]
+        if($tipo_dato[$x] == "text"){
+                    $cuerpo_modal_insertar = $cuerpo_modal_insertar . "<label>" . $campo[$x]
+                . "</label>\n\t\t\t<textarea id=\"". $campo[$x] ."\" rows=\"4\" cols=\"50\""
+                . "class=\"form-control input-sm\" required=\"\"></textarea>\n\t\t\t";
+        }else{
+                    $cuerpo_modal_insertar = $cuerpo_modal_insertar . "<label>" . $campo[$x]
                 . "</label>\n\t\t\t<input type=\"" . $tipo_dato[$x] . "\" id=\""
                 . $campo[$x] . "\" class=\"form-control input-sm\" required=\"\">\n\t\t\t";
+        }
         $x++;
     }
     $cuerpo_modal_insertar = $cuerpo_modal_insertar . "</div>\n\t\t    ";
@@ -180,7 +188,11 @@ function cuerpo_modal_edicion($llave, $llave_tipo_dato, $modi, $modi_tipo_dato){
     $cuerpo_modal_edicion = "<input type=\"".$llave_tipo_dato."\" hidden=\"\" id=\"" . $llave . "u\">\n\t\t\t";
     $x = 1;
     while ($x <= count($modi)) {
-        $cuerpo_modal_edicion = $cuerpo_modal_edicion . "<label>" . $modi[$x] . "</label>\n\t\t\t<input type=\"" . $modi_tipo_dato[$x] . "\" id=\"" . $modi[$x] . "u\" class=\"form-control input-sm\" required=\"\">\n\t\t\t";
+        if($modi_tipo_dato[$x] == "text"){
+            $cuerpo_modal_edicion = $cuerpo_modal_edicion . "<label>" . $modi[$x] . "</label>\n\t\t\t<textarea id=\"". $modi[$x] ."u\" rows=\"4\" cols=\"50\" class=\"form-control input-sm\" required=\"\"></textarea>\n\t\t\t";
+        }else{
+            $cuerpo_modal_edicion = $cuerpo_modal_edicion . "<label>" . $modi[$x] . "</label>\n\t\t\t<input type=\"" . $modi_tipo_dato[$x] . "\" id=\"" . $modi[$x] . "u\" class=\"form-control input-sm\" required=\"\">\n\t\t\t";
+        }
         $x++;
     }
     return $cuerpo_modal_edicion;
@@ -218,5 +230,3 @@ function script_guardar($campo) {
     return $script_guardar;
 }
 ?>
-
-
