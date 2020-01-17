@@ -30,6 +30,7 @@ function cuerpo_modal_insertar($campo, $tipo_dato) {
 
     return $cuerpo_modal_insertar;
 }
+
 # linea 187 del archivo laboratorio/crea_clase.php
 function cuerpo_modal_edicion($llave, $llave_tipo_dato, $modi, $modi_tipo_dato){
     $cuerpo_modal_edicion = "<input type=\"".$llave_tipo_dato."\" hidden=\"\" id=\"" . $llave . "u\">\n\t\t\t";
