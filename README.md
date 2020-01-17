@@ -38,11 +38,17 @@ function cuerpo_modal_edicion($llave, $llave_tipo_dato, $modi, $modi_tipo_dato){
     }
     return $cuerpo_modal_edicion;
 }
-</pre>
+
 
 en lugar de: 
 
-<input type=\"" . $tipo_dato[$x] . "\" id=\"" . $campo[$x] . "\" class=\"form-control input-sm\" required=\"\">
+<input type="date" id="fechau" class="form-control input-sm" required="">
+
+mostra
+
+<textarea id="actividadu" rows="4" cols="50" class="form-control input-sm" required=""></textarea>
+
+</pre>
 <hr/>
 
 
