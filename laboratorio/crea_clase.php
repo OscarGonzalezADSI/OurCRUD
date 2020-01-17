@@ -42,8 +42,6 @@ function tipo_campo($fila) {
         $tipo_dato = "time";
     } elseif ($fila['DATA_TYPE'] == "varchar") {
         $tipo_dato = "text";
-    } elseif ($fila['DATA_TYPE'] == "text") {
-        $tipo_dato = "text";
     } elseif ($fila['DATA_TYPE'] == "int") {
         $tipo_dato = "number";
     } elseif ($fila['DATA_TYPE'] == "double") {
@@ -87,7 +85,7 @@ function head_clase($tabla) {
     $head = "    "
             . "<head>\n\t"
             . "<meta charset=\"UTF-8\">\n\t"
-            . "<title>Clientes</title>\n\t"
+            . "<title>" . $tabla . "</title>\n\t"
             . "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n\t"
             . "<?php\n\t"
             . "include('librerias.php');\n\t"
@@ -128,7 +126,7 @@ function modal_insertar($campo, $tipo_dato) {
             . "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n\t\t\t    "
             . "<span aria-hidden=\"true\">&times;</span>\n\t\t\t"
             . "</button>\n\t\t\t"
-            . "<h4 class=\"modal-title\" id=\"myModalLabel\">Agregar cliente</h4>\n\t\t    "
+            . "<h4 class=\"modal-title\" id=\"myModalLabel\">Agregar Registro</h4>\n\t\t    "
             . "</div>\n\t\t    " . $cuerpo_modal_insertar
             . "<div class=\"modal-footer\">\n\t\t\t"
             . "<button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" id=\"guardarnuevo\">\n\t\t\t    "
@@ -145,15 +143,9 @@ function cuerpo_modal_insertar($campo, $tipo_dato) {
     $cuerpo_modal_insertar = "<div class=\"modal-body\">\n\t\t\t";
     $x = 1;
     while ($x <= count($campo)) {
-        if($tipo_dato[$x] == "text"){
-                    $cuerpo_modal_insertar = $cuerpo_modal_insertar . "<label>" . $campo[$x]
-                . "</label>\n\t\t\t<textarea id=\"". $campo[$x] ."\" rows=\"4\" cols=\"50\""
-                . "class=\"form-control input-sm\" required=\"\"></textarea>\n\t\t\t";
-        }else{
-                    $cuerpo_modal_insertar = $cuerpo_modal_insertar . "<label>" . $campo[$x]
+        $cuerpo_modal_insertar = $cuerpo_modal_insertar . "<label>" . $campo[$x]
                 . "</label>\n\t\t\t<input type=\"" . $tipo_dato[$x] . "\" id=\""
                 . $campo[$x] . "\" class=\"form-control input-sm\" required=\"\">\n\t\t\t";
-        }
         $x++;
     }
     $cuerpo_modal_insertar = $cuerpo_modal_insertar . "</div>\n\t\t    ";
@@ -188,11 +180,7 @@ function cuerpo_modal_edicion($llave, $llave_tipo_dato, $modi, $modi_tipo_dato){
     $cuerpo_modal_edicion = "<input type=\"".$llave_tipo_dato."\" hidden=\"\" id=\"" . $llave . "u\">\n\t\t\t";
     $x = 1;
     while ($x <= count($modi)) {
-        if($modi_tipo_dato[$x] == "text"){
-            $cuerpo_modal_edicion = $cuerpo_modal_edicion . "<label>" . $modi[$x] . "</label>\n\t\t\t<textarea id=\"". $modi[$x] ."u\" rows=\"4\" cols=\"50\" class=\"form-control input-sm\" required=\"\"></textarea>\n\t\t\t";
-        }else{
-            $cuerpo_modal_edicion = $cuerpo_modal_edicion . "<label>" . $modi[$x] . "</label>\n\t\t\t<input type=\"" . $modi_tipo_dato[$x] . "\" id=\"" . $modi[$x] . "u\" class=\"form-control input-sm\" required=\"\">\n\t\t\t";
-        }
+        $cuerpo_modal_edicion = $cuerpo_modal_edicion . "<label>" . $modi[$x] . "</label>\n\t\t\t<input type=\"" . $modi_tipo_dato[$x] . "\" id=\"" . $modi[$x] . "u\" class=\"form-control input-sm\" required=\"\">\n\t\t\t";
         $x++;
     }
     return $cuerpo_modal_edicion;
