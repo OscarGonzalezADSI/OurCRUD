@@ -40,13 +40,10 @@ function cuerpo_modal_edicion($llave, $llave_tipo_dato, $modi, $modi_tipo_dato){
 }
 
 
-en lugar de: 
-
-<input type="date" id="fechau" class="form-control input-sm" required="">
-
-mostra:
-
-<textarea id="actividadu" rows="4" cols="50" class="form-control input-sm" required=""></textarea>
+# en lugar de: 
+# <input type="text" id="id_campo" class="form-control input-sm" required="">
+# mostra:
+# <textarea id="id_campo" rows="4" cols="50" class="form-control input-sm" required=""></textarea>
 
 </pre>
 <hr/>
