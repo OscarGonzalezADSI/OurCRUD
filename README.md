@@ -4,6 +4,8 @@ OurCRUD es un automatizador de procesos para proyectos de desarrollo web, bajo e
 En esta versión se mejoró la presentación de los formularios de insertar y modificar registros para que el programa reconozca cuando el campo es de tipo "text" y habilite la etiqueta apropiada bajo el siguiente estandar:<br>
 
 <pre>
+# Informe de cambios.
+
 # linea 45 del archivo laboratorio/crea_clase.php
     } elseif ($fila['DATA_TYPE'] == "text") {
         $tipo_dato = "text";
