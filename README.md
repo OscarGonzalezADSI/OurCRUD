@@ -3,8 +3,13 @@ OurCRUD es un automatizador de procesos para proyectos de desarrollo web, bajo e
 # OurCRUD 2.1
 En esta versión se mejoró la presentación de los formularios de insertar y modificar registros para que el programa reconozca cuando el campo es de tipo "text" y habilite la etiqueta apropiada bajo el siguiente estandar:<br/><br/>
 
-Mostrará un "texarea" en lugar de un simple cuadro de texto, bajo la siguiente configuración por defecto:<br/></br>
-<textarea id="id_campo" rows="4" cols="50" class="form-control input-sm" required=""></textarea></br></br>
+<pre>
+<textarea id="id_campo" rows="4" cols="50" class="form-control input-sm" required=""></textarea>
+</pre>
+
+Como se puede apreciar se pone un "texarea" en lugar de un simple cuadro de texto.<br/>
+Abajo, la presentación del codigo modificado.</br>
+
 <pre>
 # Informe de cambios.
 
@@ -52,6 +57,7 @@ function cuerpo_modal_edicion($llave, $llave_tipo_dato, $modi, $modi_tipo_dato){
 
 
 <hr/>
-OscarGonzalez1987/OurCRUD is licensed under the
+
+OscarGonzalez1987/OurCRUD is licensed under the<br>
 # GNU Lesser General Public License v3.0
 Permissions of this copyleft license are conditioned on making available complete source code of licensed works and modifications under the same license or the GNU GPLv3. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work through interfaces provided by the licensed work may be distributed under different terms and without source code for the larger work.
