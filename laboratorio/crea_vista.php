@@ -103,7 +103,7 @@ function body($datos, $registro, $btnMod, $btnEli, $tabla){
             . "<center>\n"
             . "<h2>".$tabla."</h2>\n"
             . "</center>\n"
-            . "<button class=\"btn btn-primary navbar-right\"\n"
+            . "<button class=\"btn btn-primary navbar-left\"\n"
             . "               data-toggle=\"modal\"\n"
             . "               data-target=\"#modalNuevo\">\n"
             . "    Agregar ".$tabla."\n"
