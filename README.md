@@ -3,7 +3,7 @@ OurCRUD es un automatizador de procesos para proyectos de desarrollo web, bajo e
 # OurCRUD 2.1
 En esta versión se mejoró la presentación de los formularios de insertar y modificar registros para que el programa reconozca cuando el campo es de tipo "text" y habilite la etiqueta apropiada bajo el siguiente estandar:<br/><br/>
 
-Mostrará un "texarea" en lugar de un simple cuadro de texto, bajo la siguiente configuración por defecto:<br/>
+Mostrará un "texarea" en lugar de un simple cuadro de texto, bajo la siguiente configuración por defecto:<br/></br>
 <textarea id="id_campo" rows="4" cols="50" class="form-control input-sm" required=""></textarea>
 <pre>
 # Informe de cambios.
