@@ -44,7 +44,7 @@ en lugar de:
 
 <input type="date" id="fechau" class="form-control input-sm" required="">
 
-mostra
+mostra:
 
 <textarea id="actividadu" rows="4" cols="50" class="form-control input-sm" required=""></textarea>
 
