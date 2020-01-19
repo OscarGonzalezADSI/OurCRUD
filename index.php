@@ -72,7 +72,7 @@ patent rights.
         <div class="container">
             <div class="col-sm-4" style="float:left">
                 <center><img style="height:250px;" src="imagenes/our_crud.png" alt=""/><br/>
-                    V. Master 2.0</center>
+                    V. Master 2.1</center>
                 <div style="float: left">
                     <a href="laboratorio/crear_proyecto.php"></a>
                     <div style="font-size: 14px;
