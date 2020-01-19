@@ -71,8 +71,10 @@ patent rights.
         <br/>
         <div class="container">
             <div class="col-sm-4" style="float:left">
-                <center><img style="height:250px;" src="imagenes/our_crud.png" alt=""/><br/>
-                    V. Master 2.0</center>
+                <center>
+                    <img style="height:250px;" src="imagenes/our_crud.png" alt=""/><br/>
+                    <b>V. Master 2.1</b>
+                </center>
                 <div style="float: left">
                     <a href="laboratorio/crear_proyecto.php"></a>
                     <div style="font-size: 14px;
@@ -82,9 +84,9 @@ patent rights.
                         <p class="text-small text-gray mb-0 lh-condensed-ultra">
                             OscarGonzalez1987/OurCRUD is licensed under the
                         </p>
-                        <h3 class="mt-0 mb-2 h4">GNU Lesser General Public License v3.0</h3><br/>
-
-
+                        <center>
+                            <h3 class="mt-0 mb-2 h4">GNU General Public</br> License v3.0</h3><br/>
+                        </center>
                     </div>                
                 </div> 
             </div>
