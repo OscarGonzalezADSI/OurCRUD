@@ -187,6 +187,5 @@ function crear_archivo($tabla, $contenido){
         fflush($archivo);
     }
     fclose($archivo);
-    // https://www.php.net/manual/es/function.rename.php
 }
 ?>
