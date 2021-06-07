@@ -1,11 +1,11 @@
 <?php
 
-// fuente: https://www.php.net/manual/es/function.mkdir.php
+include "crea_header.php";
 
 function proyecto($host, $user, $password, $base){
     crea_capas();
     crea_archivos();
-    crea_header($base); // crea_archivos(); // include 'crea_header.php';
+    new Crea_header($base);
     $conn = conexionc($host, $user, $password, $base);
     $sql = "Show tables from $base";
     $consulta = mysqli_query($conn, $sql);
@@ -45,7 +45,6 @@ function crea_archivos() {
     include 'crea_clase.php';
     include 'crea_librerias.php';
     include 'crea_footer.php';
-    include 'crea_header.php'; // --> crea_header($base);
 }
 
 function accion_crear_archivos($base, $tabla) {
